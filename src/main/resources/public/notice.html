@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>征求</title>
+</head>
+<body>
+
+<!--<form method="get" action="http://localhost:8080/add">-->
+<!--    <input name="title" type="text">-->
+<!--    <input name="tag" type="text">-->
+<!--    <textarea name="text"></textarea>-->
+<!--    <button type="submit">登录</button>-->
+<!--</form>-->
+<input id="title">
+<input id="tag">
+<textarea id="text"></textarea>
+<button onclick="Submit()">登录</button>
+
+</body>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+function Submit(){
+        var title = $("#title").val();
+        var tag = $("#tag").val();
+        var text = $("#text").val();
+        $.ajax({
+            url:'http://localhost:8080/add',
+            type:'get',
+            data:{'title':title,'tag':tag,'text':text},
+            xhrFields:{withCredentials:true},
+            success: function(res) {
+            console.log("储存成功")
+
+            }
+        });
+      }
+      </script>
+</html>
