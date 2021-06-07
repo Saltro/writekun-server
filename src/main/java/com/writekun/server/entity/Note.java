@@ -10,12 +10,12 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Note {
-    public int id;
-    public String title;
-    public String tag;
-    public String text;
-    public Date date;
-    public int status;
-    public int user_id;
-    public String username;
+    private int id;
+    private String title;
+    private String tag;
+    private String text;
+    private Date date;
+    private int status;
+    private int user_id;
+    private String username;
 }

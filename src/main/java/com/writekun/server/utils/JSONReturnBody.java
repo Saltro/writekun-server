@@ -15,6 +15,12 @@ public class JSONReturnBody<T> {
         statusMsg = rs.getStatusMsg();
     }
 
+    public JSONReturnBody(ReturnStatus rs, T obj) {
+        statusCode = rs.getStatusCode();
+        statusMsg = rs.getStatusMsg();
+        data = obj;
+    }
+
     public void setStatus(ReturnStatus rs) {
         statusCode = rs.getStatusCode();
         statusMsg = rs.getStatusMsg();
