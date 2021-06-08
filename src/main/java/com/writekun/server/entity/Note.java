@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.sql.Timestamp;
 
 @Data
 @AllArgsConstructor
@@ -14,8 +14,9 @@ public class Note {
     private String title;
     private String tag;
     private String text;
-    private Date date;
+    private Timestamp createDate;
+    private Timestamp changeDate;
     private int status;
-    private int user_id;
+    private int userId;
     private String username;
 }

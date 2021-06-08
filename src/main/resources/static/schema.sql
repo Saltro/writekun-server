@@ -4,7 +4,8 @@ create table if not exists `note` (
     title varchar(30),
     tag varchar(30),
     text varchar(1000),
-    `date` date,
+    create_date timestamp,
+    change_date timestamp,
     `status` int,
     user_id int,
     username varchar(50)
